@@ -1,0 +1,19 @@
+name: telegram-mega-rename-bot
+services:
+  - name: telegram-mega-rename-bot
+    description: "Telegram bot to rename files in MEGA account"
+    instance:
+      type: nano
+      disk: 256
+    ports:
+      - protocol: http
+        port: 8080
+    routes:
+      - name: telegram-mega-rename-bot-route
+        port: 8080
+        path: /
+    env:
+      - name: TELEGRAM_BOT_TOKEN
+        value: "YOUR_TELEGRAM_BOT_TOKEN"
+    build:
+      type: builderpack
