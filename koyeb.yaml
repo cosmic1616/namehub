@@ -17,3 +17,6 @@ services:
         value: "YOUR_TELEGRAM_BOT_TOKEN"
     build:
       type: builderpack
+      builderpack:
+        runtime: python
+        version: "3.11"  # Specify a compatible Python version
